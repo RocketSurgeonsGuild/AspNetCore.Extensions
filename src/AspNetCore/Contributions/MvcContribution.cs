@@ -8,8 +8,8 @@ using Rocket.Surgery.AspNetCore.Conventions;
 using Rocket.Surgery.AspNetCore.Filters;
 using Rocket.Surgery.AspNetCore.Views;
 using Rocket.Surgery.Conventions;
+using Rocket.Surgery.Conventions.DependencyInjection;
 using Rocket.Surgery.Conventions.Reflection;
-using Rocket.Surgery.Extensions.DependencyInjection;
 
 [assembly: Convention(typeof(AspNetCoreConvention))]
 

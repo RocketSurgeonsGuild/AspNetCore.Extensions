@@ -11,7 +11,7 @@ using NodaTime;
 using NodaTime.Serialization.SystemTextJson;
 using Rocket.Surgery.AspNetCore;
 using Rocket.Surgery.Conventions;
-using Rocket.Surgery.Extensions.DependencyInjection;
+using Rocket.Surgery.Conventions.DependencyInjection;
 
 [assembly: Convention(typeof(SystemJsonTextConvention))]
 

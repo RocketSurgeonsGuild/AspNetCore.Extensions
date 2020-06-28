@@ -25,9 +25,8 @@
     <PackageReference Update="NodaTime.Serialization.JsonNet" Version="2.3.0" />
     <PackageReference Update="NodaTime.Serialization.SystemTextJson" Version="1.0.0-beta02" />
     <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.11" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="9.1.1" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="10.0.0-beta.2" />
     <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="2.3.1" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="9.1.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Bogus" Version="29.0.2" />

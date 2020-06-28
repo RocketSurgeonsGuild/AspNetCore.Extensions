@@ -10,7 +10,6 @@
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Rocket.Surgery.Build.Information" />
         <PackageReference Include="Rocket.Surgery.Conventions.Abstractions" />
-        <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
         <PackageReference Include="Rocket.Surgery.Extensions.Abstractions" />
         <PackageReference Include="NodaTime" />
         <PackageReference Include="NodaTime.Serialization.SystemTextJson" />
