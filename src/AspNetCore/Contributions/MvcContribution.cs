@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Rocket.Surgery.AspNetCore.Contributions;
 using Rocket.Surgery.AspNetCore.Conventions;
 using Rocket.Surgery.AspNetCore.Filters;
-using Rocket.Surgery.AspNetCore.Views;
 using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Conventions.DependencyInjection;
 using Rocket.Surgery.Conventions.Reflection;
@@ -44,29 +43,8 @@ namespace Rocket.Surgery.AspNetCore.Contributions
                     .AddApplicationPart(item);
             }
 
-            context.Services.Configure<RazorViewEngineOptions>(options =>
-            {
-                // {0} - Action Name
-                // {1} - Controller Name
-                // {2} - Area Name
-                // {3} - Feature Name
-                // Replace normal view location entirely
-                for (var i = Locations.Length - 1; i >= 0; i--)
-                {
-                    options.AreaViewLocationFormats.Insert(0, $"/Areas/{{2}}{Locations[i]}");
-                }
-
-                for (var i = Locations.Length - 1; i >= 0; i--)
-                {
-                    options.ViewLocationFormats.Insert(0, Locations[i]);
-                }
-
-                options.ViewLocationExpanders.Add(new FeatureViewLocationExpander());
-            });
-
             context.Services.Configure<MvcOptions>(options =>
             {
-                options.Conventions.Add(new FeatureConvention());
                 options.Filters.Add<NotFoundExceptionFilter>();
                 options.Filters.Add<RequestExceptionFilter>();
             });
