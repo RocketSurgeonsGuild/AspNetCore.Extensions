@@ -14,4 +14,10 @@
         <PackageReference Include="NodaTime" />
         <PackageReference Include="NodaTime.Serialization.SystemTextJson" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Views" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="Views\FeatureViewLocationExpander.cs" />
+    </ItemGroup>
 </Project>
