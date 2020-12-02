@@ -13,23 +13,23 @@
     <GlobalPackageReference Include="Roslynator.Analyzers" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="GitVersion.Tool" Version="5.5.0" />
+    <PackageReference Update="GitVersion.Tool" Version="5.5.1" />
     <PackageReference Update="JetBrains.ReSharper.CommandLineTools" Version="2020.2.4" />
-    <PackageReference Update="Nuke.Common" Version="0.25.0-alpha0334" />
-    <PackageReference Update="ReportGenerator" Version="4.7.1" />
-    <PackageReference Update="Rocket.Surgery.Nuke" Version="0.14.0-beta.8" />
+    <PackageReference Update="Nuke.Common" Version="5.0.0" />
+    <PackageReference Update="ReportGenerator" Version="4.8.1" />
+    <PackageReference Update="Rocket.Surgery.Nuke" Version="0.14.2" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.0" />
     <PackageReference Update="NodaTime" Version="3.0.3" />
     <PackageReference Update="NodaTime.Serialization.JsonNet" Version="3.0.0" />
     <PackageReference Update="NodaTime.Serialization.SystemTextJson" Version="1.0.0" />
     <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.11" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="10.0.0-beta.44" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="10.0.0-beta.98" />
     <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Bogus" Version="31.0.3" />
+    <PackageReference Update="Bogus" Version="32.0.1" />
     <PackageReference Update="coverlet.collector" Version="1.3.0" />
     <PackageReference Update="coverlet.msbuild" Version="2.9.0" />
     <PackageReference Update="FakeItEasy" Version="6.2.1" />
@@ -37,10 +37,11 @@
     <PackageReference Update="FluentAssertions" Version="5.10.3" />
     <PackageReference Update="FluentAssertions.Analyzers" Version="0.11.4" />
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.8.0" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="5.3.0" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Testing.XUnit" Version="5.3.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="6.0.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing.XUnit" Version="6.0.0" />
     <PackageReference Update="xunit" Version="2.4.1" />
     <PackageReference Update="xunit.analyzers" Version="0.10.0" />
     <PackageReference Update="xunit.runner.visualstudio" Version="2.4.3" />
   </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)/Packages.support.props" Condition="Exists('$(MSBuildThisFileDirectory)/Packages.support.props')" />
 </Project>

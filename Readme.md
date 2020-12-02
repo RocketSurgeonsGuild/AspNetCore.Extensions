@@ -33,9 +33,9 @@ TBD
 [github-license-badge]: https://img.shields.io/github/license/RocketSurgeonsGuild/AspNetCore.Extensions.svg?style=flat "License"
 [codecov]: https://codecov.io/gh/RocketSurgeonsGuild/AspNetCore.Extensions
 [codecov-badge]: https://img.shields.io/codecov/c/github/RocketSurgeonsGuild/AspNetCore.Extensions.svg?color=E03997&label=codecov&logo=codecov&logoColor=E03997&style=flat "Code Coverage"
-[azurepipelines]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=34&branchName=master
+[azurepipelines]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build/latest?definitionId=34&branchName=master
 [azurepipelines-badge]: https://img.shields.io/azure-devops/build/rocketsurgeonsguild/Libraries/34.svg?color=98C6FF&label=azure%20pipelines&logo=azuredevops&logoColor=98C6FF&style=flat "Azure Pipelines Status"
-[azurepipelines-history]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build?definitionId=34&branchName=master
+[azurepipelines-history]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build?definitionId=34&branchName=master
 [azurepipelines-history-badge]: https://buildstats.info/azurepipelines/chart/rocketsurgeonsguild/Libraries/34?includeBuildsFromPullRequest=false "Azure Pipelines History"
 [github]: https://github.com/RocketSurgeonsGuild/AspNetCore.Extensions/actions?query=workflow%3Aci
 [github-badge]: https://img.shields.io/github/workflow/status/RocketSurgeonsGuild/AspNetCore.Extensions/ci.svg?label=github&logo=github&color=b845fc&logoColor=b845fc&style=flat "GitHub Actions Status"

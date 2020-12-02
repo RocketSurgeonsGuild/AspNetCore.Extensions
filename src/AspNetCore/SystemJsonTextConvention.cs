@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 using System.Xml.XPath;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NodaTime;
 using NodaTime.Serialization.SystemTextJson;
@@ -30,14 +31,16 @@ namespace Rocket.Surgery.AspNetCore
         /// Registers the specified context.
         /// </summary>
         /// <param name="context">The context.</param>
-        public void Register(IServiceConventionContext context)
+        /// <param name="configuration">The configuration.</param>
+        /// <param name="services">The services.</param>
+        public void Register(IConventionContext context, IConfiguration configuration, IServiceCollection services)
         {
             if (context is null)
             {
                 throw new ArgumentNullException(nameof(context));
             }
 
-            context.Services.Configure<JsonOptions>(
+            services.Configure<JsonOptions>(
                 options =>
                 {
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));

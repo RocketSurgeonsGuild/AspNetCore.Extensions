@@ -2,6 +2,7 @@ using System;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Rocket.Surgery.AspNetCore.Contributions;
 using Rocket.Surgery.AspNetCore.Conventions;
@@ -25,15 +26,16 @@ namespace Rocket.Surgery.AspNetCore.Contributions
         /// Registers the specified context.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// TODO Edit XML Comment Template for Register
-        public void Register([NotNull] IServiceConventionContext context)
+        /// <param name="configuration">The configuration.</param>
+        /// <param name="services">The services.</param>
+        public void Register(IConventionContext context, IConfiguration configuration, IServiceCollection services)
         {
             if (context == null)
             {
                 throw new ArgumentNullException(nameof(context));
             }
 
-            var coreBuilder = context.Services
+            var coreBuilder = services
                 .AddMvcCore()
                 .AddControllersAsServices()
                 .AddApiExplorer();
@@ -43,23 +45,11 @@ namespace Rocket.Surgery.AspNetCore.Contributions
                     .AddApplicationPart(item);
             }
 
-            context.Services.Configure<MvcOptions>(options =>
+            services.Configure<MvcOptions>(options =>
             {
                 options.Filters.Add<NotFoundExceptionFilter>();
                 options.Filters.Add<RequestExceptionFilter>();
             });
         }
-
-        /// <summary>
-        /// The locations
-        /// </summary>
-        private static readonly string[] Locations = {
-            "/{3}/{1}/{0}.cshtml",
-            "/{3}/{0}.cshtml",
-            "/{3}/{1}.cshtml",
-            "/Shared/{0}.cshtml",
-            "/Views/{0}.cshtml",
-            "/Views/{1}.cshtml",
-        };
     }
 }
